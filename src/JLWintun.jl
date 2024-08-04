@@ -9,7 +9,7 @@ ROOT permission is required to run!!!
     https://github.com/shuaixing86/Wintun
     https://www.wintun.net/
 """
-module Wintun
+module JLWintun
 
 # loading dll file
 arch = Sys.ARCH
@@ -218,4 +218,4 @@ function WintunSendPacket(session::Ptr{Cvoid}, packet::Ptr{UInt8})
     ccall((:WintunSendPacket, wintunpath), Cvoid, (Ptr{Cvoid}, Ptr{UInt8}), session, packet)
 end
 
-end # module Wintun
+end # module JLWintun
